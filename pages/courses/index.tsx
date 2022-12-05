@@ -17,10 +17,7 @@ const Home: NextPage<{ lessons: Lesson[] }> = ({ lessons }) => {
     <div>
       <Head>
         <title>Daily Code Lessons</title>
-        <meta
-          name="description"
-          content="Create and share prompts for different AI systems"
-        />
+        <meta name="description" content="Daily Code Lessons" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
