@@ -49,12 +49,13 @@ const Lesson: NextPage<{ lesson: Lesson }> = ({ lesson }) => {
                     return !inline && match ? (
                       <SyntaxHighlighter
                         showLineNumbers
-                        children={String(children).replace(/\n$/, "")}
                         language={match[1]}
                         PreTag="div"
                         style={dracula as any}
                         {...props}
-                      />
+                      >
+                        {String(children).replace(/\n$/, "")}
+                      </SyntaxHighlighter>
                     ) : (
                       <code className={className} {...props}>
                         {children}
@@ -79,12 +80,13 @@ const Lesson: NextPage<{ lesson: Lesson }> = ({ lesson }) => {
                         <SyntaxHighlighter
                           showLineNumbers
                           wrapLongLines
-                          children={String(children).replace(/\n$/, "")}
                           language={match[1]}
                           PreTag="div"
                           style={dracula as any}
                           {...props}
-                        />
+                        >
+                          {String(children).replace(/\n$/, "")}
+                        </SyntaxHighlighter>
                       ) : (
                         <code className={className} {...props}>
                           {children}
